@@ -5,6 +5,19 @@ main {
   font-family: Arial, sans-serif;
   line-height: 1.8;
 }
+label {
+  display: block;
+  margin-bottom: 16px;
+}
+input,
+textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  font: inherit;
+}
 button {
   padding: 10px 20px;
   font: inherit;

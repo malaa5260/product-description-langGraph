@@ -1,6 +1,22 @@
 <main dir="rtl">
   <h1>وصف المنتج</h1>
-  <p>سماعة لاسلكية — بطارية 30 ساعة، مقاومة للمياه.</p>
+  <!-- Slide 3: form fields replace the fixed example data. -->
+  <label>
+    اسم المنتج
+    <input
+      type="text"
+      [value]="productName()"
+      (input)="updateProductName($event)"
+    />
+  </label>
+  <label>
+    المواصفات
+    <textarea
+      rows="5"
+      [value]="specifications()"
+      (input)="updateSpecifications($event)"
+    ></textarea>
+  </label>
   <p>وصف تجريبي بدون اتصال بالذكاء الاصطناعي.</p>
   <button type="button" (click)="generate()" [disabled]="isGenerating()">
     {{ isGenerating() ? 'جاري التوليد…' : 'ولّد الوصف' }}
